@@ -50,9 +50,28 @@ WHERE `date`= "2020-06-20" AND`hour`>"14:00:00"
 
 6. Selezionare tutti i corsi di laurea magistrale (38)
 
+'''sql
+SELECT `id`,`level`
+FROM `university_db`.`degrees`
+WHERE `level`= "magistrale" 
+'''
+
 7. Da quanti dipartimenti è composta l'università? (12)
 
+'''sql
+SELECT COUNT(*)
+FROM `university_db`.`departments`
+'''
+
+
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
+
+'''sql
+SELECT `id`,`name`,`phone`
+FROM `university_db`.`teachers`
+WHERE `phone` IS NULL
+'''
+
 
 9. Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo degree_id, inserire un valore casuale)
 
